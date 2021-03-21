@@ -53,7 +53,6 @@ def recalculate(sql_row, cur, conn, sleep_time=20):
 
 
 def sql_operation():
-    import time
     # połączenie z bazą
     conn = connect()
 
@@ -72,22 +71,23 @@ def sql_operation():
         sql_flag_is_1 = fetch_query(cur, query_flag_is_1)
 
         if sql_flag_is_1 is not None:
-            # jeżeli znajdzie, obliczba ponownie
+            # jeżeli znajdzie, oblicza
             recalculate(sql_flag_is_1, cur, conn)
 
         else:
             # jeżeli nie znajdzie, baza jest aktualna
             print("Base up to date")
-            time.sleep(5)
 
     conn.close()
 
 
 def sql_take_row():
     conn = connect()
+    cur = conn.cursor()
+
     query_flag_is_4 = check_flag(4)
     query_flag_is_1 = check_flag(1)
-    cur = conn.cursor()
+
     sql_flag_is_4 = fetch_query(cur, query_flag_is_4)
     sql_flag_is_1 = fetch_query(cur, query_flag_is_1)
 
