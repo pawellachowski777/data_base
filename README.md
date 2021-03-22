@@ -7,7 +7,7 @@ This application was created as an exercise in creating an architecture to commu
 
 This is a structure of the table *a_b* in the database created in Postgresql
 
-![makra](https://drive.google.com/uc?export=view&id=1p43Q_dXpL_BqRZ9q5F6C5xg-ounZ7Pyu)  
+![makra](https://drive.google.com/uc?export=view&id=1p43Q_dXpL_BqRZ9q5F6C5xg-ounZ7Pyu)
 
 
 When we enter URL http://127.0.0.1:7000/base with all four *.py* files running
